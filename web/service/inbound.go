@@ -436,7 +436,5 @@ func (s *InboundService) GetClientTrafficById(uuid string) (traffic *xray.Client
 		logger.Warning(err)
 		return nil, err
 	}
-	logger.Warning(traffic)
-
 	return traffic, err
 }
