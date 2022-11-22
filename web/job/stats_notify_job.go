@@ -228,6 +228,9 @@ func (j *StatsNotifyJob) getClientUsage(id string) string {
 		logger.Warning(err)
 		return "something wrong!"
 	}
+	if id == "" {
+		return "Set UUID OR ID !"
+	}
 	expiryTime := ""
 	if traffic.ExpiryTime == 0 {
 		expiryTime = fmt.Sprintf("unlimited")
