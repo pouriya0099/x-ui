@@ -176,7 +176,7 @@ func (j *StatsNotifyJob) OnReceive() *StatsNotifyJob {
 
 				switch update.CallbackQuery.Data {
 					case "get_usage":
-						msg.Text = "for get your usage send command like this : \n <code>/usage uuid | id</code> \n example : <code>/usage fc3239ed-8f3b-4151-ff51-b183d5182142</code>"
+						msg.Text = "برای دریافت باقی مانده: \n <code>/usage uuid | id</code> \n example : <code>/usage fc3239ed-8f3b-4151-ff51-b183d5182142</code>"
 						msg.ParseMode = "HTML"
 					}
 				if _, err := bot.Send(msg); err != nil {
